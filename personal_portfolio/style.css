@@ -4,28 +4,61 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
-    background: #080808;
-    color: #fff;
+    background: #ece0d1;
+    color: #494642;
+}
+.highlight {
+    background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=435683);
+    color: #ece0d1;
+    margin: -2px -6px;
+    padding: 15px 20px;
 }
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/three.jpeg);
+    /* background-image: url(images/three.jpeg); */
     background-size: cover;
     background-position: center;
 }
 .container{
-    padding: 10px 10%;
+    padding: 1% 8%;
+}
+.personal_portrait{
+    float: right;
+    display: inline;
+    width: 20%;
+    height: 80%;
+    background: #494642;
+}
+.header-text p{
+    position: relative;
+    top: 18px;
+    left: 2px;
+}
+.header-text h1{
+    display: inline;
+    position: relative;
+    top: 32px;
+}
+.socials li{
+    display: inline-block;
+    list-style: none;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.socials a:hover {
+    opacity: 0.7;
 }
 nav{
     display: flex;
+    float: right;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.logo{
-    width:140px;
 }
 nav ul li{
     display: inline-block;
@@ -33,7 +66,7 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fff;
+    color: #38220f;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -42,7 +75,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #435683;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -54,19 +87,15 @@ nav ul li a:hover::after{
 .header-text{
     margin-top: 20%;
     font-size: 30px;
-
 }
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text h1 span{
-    color: #ff004f;
-}
 /* ---------------------------About------------------------ */
 #about{
-    padding: 80px 0;
-    color: #ff007f;
+    padding: 30px 0;
+    color: #494642;
 }
 .row{
     display: flex;
@@ -87,7 +116,7 @@ nav ul li a:hover::after{
 .subtitle{
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #494642;
 }
 .tab-titles{
     display: flex;
@@ -104,32 +133,208 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #435683;
     position: absolute;
     left:0;
     bottom: -10px;
     transition: 0.5s;
 }
+
 .tab-links.active-link::after{
     width: 50%;
 }
 .tab-contents ul li{
     list-style: none;
-    margin: 10px 0;
+    margin: 25px 0;
+}
+.tab-contents ul li p{
+    text-align: left;
+    color: #2f426f;
+    font-weight: bold;
 }
 .tab-contents ul li span{
-    color: #ff004f;
+    float: right;
+}
+.tab-contents a{
+    text-decoration: none;
+}
+.tab-contents img{
+    display: inline-block;
+    width: 50px;
+    height: 45px;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* ---------------------------Portfolio------------------------ */
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 20px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer img{
+    width: 20px;
+    height: 20px;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #b7becc);
+    color: #ece0d1;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
     font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.layer a {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #ece0d1;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.layer a img {
+    margin-top: 20px;
+}
+.work:hover img {
+    transform: scale(1.1);
+}
+.work:hover .layer {
+    height: 100%;
+}
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #8d96a8;
+    padding: 14px 30px;
+    border-radius: 6px;
+    border-width: medium;
+    text-decoration: none;
+    font-weight: bold;
+    color: #494642;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: #8d96a8;
+    transform: scale(1.1);
+}
+/* ---------------------------Contact------------------------ */
+.contact-left {
+    flex-basis: 50%;
+}
+.contact-right {
+    flex-basis: 50%;
+}
+.contact-left p{
+    font-size: 18px;
+    margin: 52px 0;
+}
+.contact-left p img {
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+}
+.socials-icons {
+    margin-top: 30px;
+}
+.socials-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-right: 15px;
+    color: black;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+#github-icon{
+    margin-left:50px;
+}
+.socials-icons a:hover{
+    opacity: 0.7;
+    transform: translateY(-5px);
+}
+.btn.btn2 {
+    display: inline-block;
+    background: #8d96a8;
+}
+.contact-right form {
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+#msg {
+    color: #435683;
+    margin-top: -40px;
+    display: block;
 }
 
 
-
-
-
-
-
-
-
+/* ---------------------------css for small screen------------------------ */
+@media only screen and (max-width: 600px){
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+}
 
 
 

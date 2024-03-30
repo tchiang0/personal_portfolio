@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding:0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Georgia", serif;
     box-sizing: border-box;
 }
 html{
@@ -66,7 +66,7 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #38220f;
+    color: #494642;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -92,9 +92,10 @@ nav ul li a:hover::after{
     font-size: 60px;
     margin-top: 20px;
 }
+
 /* ---------------------------About------------------------ */
 #about{
-    padding: 30px 0;
+    padding: 90px 0;
     color: #494642;
 }
 .row{
@@ -174,7 +175,7 @@ nav ul li a:hover::after{
 
 /* ---------------------------Portfolio------------------------ */
 #portfolio{
-    padding: 50px 0;
+    padding: 80px 0;
 }
 .work-list{
     display: grid;
@@ -231,6 +232,10 @@ nav ul li a:hover::after{
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    transition: 0.5s;
+}
+.layer a:hover{
+    transform: scale(1.1);
 }
 .layer a img {
     margin-top: 20px;
@@ -252,10 +257,11 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-weight: bold;
     color: #494642;
+    background-color: #8d96a8;
     transition: 0.5s;
 }
 .btn:hover{
-    background-color: #8d96a8;
+    background-color: #ece0d1;
     transform: scale(1.1);
 }
 /* ---------------------------Contact------------------------ */
@@ -296,7 +302,6 @@ nav ul li a:hover::after{
 }
 .btn.btn2 {
     display: inline-block;
-    background: #8d96a8;
 }
 .contact-right form {
     width: 100%;
@@ -337,4 +342,55 @@ form .btn2{
 }
 
 
-
+/* ---------------------------Personal Project HTML------------------------ */
+#pp-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.p_container {
+    display: grid;
+    grid-template-columns: 1fr; /* Adjusted to fit one column */
+    grid-gap: 100px;
+    margin-top: 10px;
+}
+.p_row {
+    display: grid;
+    grid-template-columns: 1fr; /* Adjusted to fit one column */
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.p_row li{
+    list-style: none;
+}
+.p_content {
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+    height: 80%;
+    background-color: #f0f1f2;
+    box-shadow: 10px 10px 4px #bdc1c4;
+    margin: 10px 0;
+    overflow: hidden;
+}
+.p_content img {
+    width: 40%;
+    border-radius: 10px;
+}
+.p_content article {
+    color: #494642;
+    margin: 60px 30px; /* Adjusted margin */
+}
+.p_content a {
+    margin-left: 300px;
+}
+.btn.btn3:hover{
+    background-color: #f0f1f2;
+}
+.project-name {
+    text-decoration: none;
+    color: #494642;
+}

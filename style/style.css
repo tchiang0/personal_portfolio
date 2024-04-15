@@ -394,3 +394,63 @@ form .btn2{
     text-decoration: none;
     color: #494642;
 }
+
+
+/* ---------------------------Personal Project Page HTML------------------------ */
+.project_page_container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Arrange items vertically */
+    margin-top: 20px;
+}
+.project_page_box {
+    width: 900px; /* Adjust width as needed */
+    background-color: #f0f1f2;
+    box-shadow: 10px 10px 4px #bdc1c4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; /* Center vertically */
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.project_image_container {
+    flex: 0 0 auto; /* Do not allow stretching */
+    width: 300px; /* Adjust the width of the image */
+    height: 300px;
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-position: left center; /* Align the image to the left */
+    background-repeat: no-repeat; /* Prevent repeating */
+}
+.project_image_container img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    transition: 0.5s;
+}
+.project_image_container img:hover {
+    transform: scale(1.1);
+}
+.project_desc {
+    flex-grow: 1; /* Allow content to expand */
+    padding-left: 20px; /* Add space between image and content */
+    padding-right: 20px;
+}
+.project_desc h2 {
+    margin-top: 38px; /* Adjust the top margin */
+}
+.project_desc p {
+    margin: 0;
+}
+.project_desc a {
+    display: block;
+
+    text-align: right;
+}
+.btn.btn3{
+    float: right;
+    margin-top:80px;
+}
+.btn.btn3:hover{
+    background-color: #f0f1f2;
+}

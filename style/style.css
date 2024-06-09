@@ -142,6 +142,10 @@ nav ul li a:hover::after {
     color: #2d2524;
 }
 
+.about-desc {
+    line-height: 1.5;
+}
+
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
